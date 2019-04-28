@@ -1,4 +1,4 @@
-# Ejercicio para automatizar vuelos de una compañía básico
+# Ejercicio para automatizar vuelos de una compañía básico con Angular 7
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
