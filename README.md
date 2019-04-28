@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
-al descargar o copiar el repositorio correr, dentro del directorio root del proyecto abrir un terminal y ejecutar
+al descargar o copiar el repositorio, dentro del directorio root del proyecto abrir un terminal y ejecutar
 ## npm install
 - Esto instalará todas las dependencias para poder ejecutar el proyecto con los archivos fuente
 
