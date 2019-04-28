@@ -1,27 +1,22 @@
-# CompaniaVuelo
+# Ejercicio para automatizar vuelos de una compañía básico
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
-## Development server
+al descargar o copiar el repositorio correr, dentro del directorio root del proyecto abrir un terminal y ejecutar
+##npm install
+- Esto instalará todas las dependencias para poder ejecutar el proyecto con los archivos fuente
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+##archivo externo importante (Servicio Api para este proyecto)
+- Es necesario descargar o copiar el repositorio de servicio para poder interactuar con el proyecto, el servicio api está disponible en https://github.com/danidaniel6462/Servicio-Api-Automatizaci-n-de-Vuelos-Java-Spring
+- Dentro del proyecto Maven están descritos los pasos para poder ejecutar el servicio
 
-## Code scaffolding
+## ruta del host de ejecución del servicio en el proyecto angular
+- en el directorio ##src/acceso/proxy.service.ts y src/acceso/proxy-login.service se encontrará baseURL o url con el host donde es ejecuta el servicio de Maven, si se cambia la ruta se deberá hacerlo en aquellas variables
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Ejecutar el servidor para desplegar la aplicación de Angular
 
-## Build
+Ejecute `ng serve` para un servidor dev. Vaya a `http: // localhost: 4200 /`. La aplicación se volverá a cargar automáticamente si cambia alguno de los archivos de origen.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Felicidades
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Si has realizado los pasos con se indicó en estas líneas del README.md debes poder ver la aplicación desplegada en tu navegador y realizar actualizaciones y simulaciones de solicitud de boletos para vuelos en una empresa.
