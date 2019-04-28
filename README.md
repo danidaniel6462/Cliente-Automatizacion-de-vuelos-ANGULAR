@@ -3,15 +3,18 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 al descargar o copiar el repositorio correr, dentro del directorio root del proyecto abrir un terminal y ejecutar
-##npm install
+## npm install
 - Esto instalará todas las dependencias para poder ejecutar el proyecto con los archivos fuente
 
-##archivo externo importante (Servicio Api para este proyecto)
+## Archivo externo importante (Servicio Api para este proyecto)
+
 - Es necesario descargar o copiar el repositorio de servicio para poder interactuar con el proyecto, el servicio api está disponible en https://github.com/danidaniel6462/Servicio-Api-Automatizaci-n-de-Vuelos-Java-Spring
 - Dentro del proyecto Maven están descritos los pasos para poder ejecutar el servicio
 
 ## ruta del host de ejecución del servicio en el proyecto angular
-- en el directorio ##src/acceso/proxy.service.ts y src/acceso/proxy-login.service se encontrará baseURL o url con el host donde es ejecuta el servicio de Maven, si se cambia la ruta se deberá hacerlo en aquellas variables
+## IMPORTANTE: 
+
+En el directorio src/acceso/proxy.service.ts y src/acceso/proxy-login.service se encontrará baseURL o url con el host donde es ejecuta el servicio de Maven, si se cambia la ruta se deberá hacerlo en aquellas variables
 
 ## Ejecutar el servidor para desplegar la aplicación de Angular
 
