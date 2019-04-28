@@ -1,0 +1,60 @@
+<div class="contenedor-container">
+  <div class="container wow fadeInUp">
+
+    <div class="row">
+      <div class="col">
+        <p class="h4 mb-4 text-center">Lista de viajeros</p>
+
+        <div class="row">
+          <div class="offset-md-3 col-6">
+            <label>Estado:</label>
+            <select (change)="actualizarListaBoletosFiltrado($event.target.value)" class="browser-default custom-select mb-4">
+                <option *ngFor="let estadoOpcion of estadosParaFiltro" value="{{estadoOpcion.clave}}">{{estadoOpcion.valor}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="table-responsive shadow-material">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Destino</th>
+                <th scope="col">Fecha de Viaje</th>
+                <th *ngIf="estadoCambiante == 'NUEVO'" scope="col">Fecha Solicitud</th>
+                <th *ngIf="estadoCambiante == 'NUEVO'" scope="col">Hora Solicitud</th>
+                <th *ngIf="estadoCambiante == 'RESERVADO'" scope="col">Fecha Reservado</th>
+                <th *ngIf="estadoCambiante == 'RESERVADO'" scope="col">Hora Reservado</th>
+                <th scope="col">Estado</th>
+                <th scope="col">{{estadoCambiante == 'NUEVO' ? "Reservar" : ""}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let boleto of listaBoletosFiltrados; index as i;">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{boleto.nombre}}</td>
+                <td>{{boleto.destino}}</td>
+                <td *ngIf="estadoCambiante == 'NUEVO'">{{boleto.fechaViaje}}</td>
+                <td *ngIf="estadoCambiante == 'NUEVO'">{{boleto.fechaSolicitud}}</td>
+                <td *ngIf="estadoCambiante == 'RESERVADO'">{{boleto.fechaReserva}}</td>
+                <td *ngIf="estadoCambiante == 'RESERVADO'">{{boleto.horaReservado}}</td>
+                <td>{{boleto.horaSolicitud}}</td>
+                <td>{{boleto.estado}}</td>
+                <td style="padding: 0px;">
+                  <button *ngIf="estadoCambiante == 'NUEVO'" mdbBtn type="button" (click)="reservarBoletoViaje(boleto)" color="primary" class="waves-light" mdbWavesEffect>
+                    <i class="fas fa-check"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

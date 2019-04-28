@@ -1,0 +1,33 @@
+<div class="contenedor-container">
+  <div class="container wow fadeInUp">
+    <div class="row">
+      <div class="offset-md-3 col-md-6">
+        <!-- Default form register -->
+        <form class="text-center border border-light p-5">
+
+          <p class="h4 mb-4">Ingresar</p>
+
+          <!-- E-mail -->
+          <input type="email" name="username" id="defaultRegisterFormEmail" [(ngModel)]="login.username" class="form-control mb-4" placeholder="Username">
+
+          <!-- Password -->
+          <input type="password" name="password" id="defaultRegisterFormPassword" [(ngModel)]="login.password" class="form-control" placeholder="Password"
+            aria-describedby="defaultRegisterFormPasswordHelpBlock">
+          <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+            Debe contener entre 1 y 8 caracteres
+          </small>
+          <!-- Sign up button -->
+          <button class="btn btn-info my-4 btn-block" type="submit" (click)="onSubmit()">Ingresar</button>
+          <hr>
+          <!-- Terms of service -->
+          <p>Al hacer 
+            <em>Ingresar</em> al portal, estás aceptando nuestros
+            <a href="" target="_blank">términos de servicios</a>
+
+        </form>
+        <!-- Default form register -->
+
+      </div>
+    </div>
+  </div>
+</div>
